@@ -6,7 +6,7 @@ import requests
 from cryptography.fernet import Fernet
 
 # Configurable chunk size (slightly under 100MB to be safe)
-CHUNK_SIZE = 40 * 1024 * 1024  # 95 MB
+CHUNK_SIZE = 10 * 1024 * 1024  # 95 MB
 
 def split_and_encrypt(data, key, base_name="chunk"):
     """Split bytes into chunks, encrypt each, return list of filenames."""
